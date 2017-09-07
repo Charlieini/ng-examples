@@ -1,0 +1,33 @@
+<!-- <form #formRef="ngForm">
+  <div *ngFor="let location of locations">
+    <input
+      [id]="location"
+      name="location"
+      ngModel
+      [value]="location"
+      type="radio"
+      required
+    >
+    <label [for]="location">{{location}}</label>
+  </div>
+</form>
+value: {{formRef.value | json}}
+<hr>
+valid: {{formRef.valid |json}} -->
+
+
+<form #formRef="ngForm">
+  <select name="location" ngModel>
+    <option
+      *ngFor="let location of locations"
+      [value]="location"
+    >
+      {{location}}
+    </option>
+  </select>
+</form>
+
+
+value: {{formRef.value | json}}
+<hr>
+valid: {{formRef.valid |json}}

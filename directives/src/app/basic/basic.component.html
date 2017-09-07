@@ -1,0 +1,3 @@
+<template #foo let-message="message">This is content inside template {{message}}</template>
+<div [ngTemplateOutlet]="foo" [ngOutletContext]="{message: 'Hello context'}">
+</div>
